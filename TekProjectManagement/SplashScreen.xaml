@@ -1,0 +1,69 @@
+﻿<Window x:Class="TekProjectManagement.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TekProjectManagement"
+        mc:Ignorable="d"
+        Title="SplashScreen" Height="250"
+        Width="450" Icon="Media/LogoNovo.png" WindowStyle="None" 
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen" BorderBrush="Transparent" Background="#FF3C3B3B">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.6*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="1"
+               Grid.Row="1"
+               HorizontalAlignment="Center" Height="Auto" 
+               VerticalAlignment="Center"   Width="Auto"
+               Source="/Media/unnamed.png"
+               RenderOptions.BitmapScalingMode="Fant">
+        </Image>
+        <Image Grid.Column="1"
+               Grid.Row="4"
+               HorizontalAlignment="Left" Height="Auto" 
+               VerticalAlignment="Center"   Width="Auto"
+               Source="/Media/AR3Logo.png"
+               RenderOptions.BitmapScalingMode="Fant">
+        </Image>
+        <Image Grid.Column="1"
+               Grid.Row="4"
+               HorizontalAlignment="Center" Height="Auto" 
+               VerticalAlignment="Center"   Width="Auto"
+               Source="/Media/AR4Logo.png"
+               RenderOptions.BitmapScalingMode="Fant">
+        </Image>
+        <Image Grid.Column="1"
+               Grid.Row="4"
+               HorizontalAlignment="Right" Height="Auto" 
+               VerticalAlignment="Center"   Width="Auto"
+               Source="/Media/AR5Logo.png"
+               RenderOptions.BitmapScalingMode="Fant">
+        </Image>
+        <Label
+            Name="Wedeliver" FontSize="16" Height="Auto" FontFamily="Arial Black"
+            Grid.Column="1" Grid.Row="2" Width="Auto" VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="White" FontWeight="Bold"
+            >WE DELIVER YOUR PROMISE
+        </Label>
+        <Label
+            Name="Copyright" FontSize="8" Height="Auto" FontFamily="Arial"
+            Grid.Column="2" Grid.Row="5" VerticalAlignment="Bottom" Foreground="White" Margin="50,0,0,0" HorizontalAlignment="Left" Width="34"
+            >V0.020
+        </Label>
+    </Grid>
+</Window>        
+    
+    
+    
+    
