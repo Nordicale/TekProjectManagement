@@ -19,12 +19,11 @@
                     <Button.Background>
                         <ImageBrush ImageSource="Media/LogoNovo.png" Stretch="Uniform"/>
                     </Button.Background>
-
                 </Button>
                 <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="50" Height="50" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Margin="10">
                     <materialDesign:PackIcon Kind="InformationOutline" Height="40" Width="40"/>
                 </Button>
-             </StackPanel>
+            </StackPanel>
             <ListView>
                 <ListViewItem Height="60">
                     <StackPanel Orientation="Horizontal" Margin="10 0">
@@ -44,8 +43,8 @@
             <ListView>
                 <ListViewItem Height="60">
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="Human" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Production Management" Margin="10" VerticalAlignment="Center"/>
+                        <materialDesign:PackIcon Kind="DeveloperBoard" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Production" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
             </ListView>
@@ -81,8 +80,16 @@
                     </StackPanel>
                 </ListViewItem>
             </ListView>
+            <ListView>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                        <materialDesign:PackIcon Kind="Run" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Logout" Margin="10" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
         </StackPanel>
-        <Grid Background="#FFFBFBFB" Margin="250 50 0 50" Width="1024">
+        <Grid Background="#FF5F0000" Margin="250 50 0 50" Width="1024">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="250"/>
@@ -143,10 +150,12 @@
                     <ColumnDefinition Width="*"/>
                     
                 </Grid.ColumnDefinitions>
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5">
+                <Button x:Name="ButtonOpenMenu" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5">
                     <materialDesign:PackIcon Kind="Menu" Foreground="Black"/>
                 </Button>
-
+                <Button x:Name="ButtonCloseMenu" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5">
+                    <materialDesign:PackIcon Kind="Menu" Foreground="Black"/>
+                </Button>
                 <TextBlock Text="Photos" Foreground="White" FontSize="30" FontWeight="Bold" Margin="5" Grid.Row="1"/>
 
                 <Grid Margin="5" Grid.Row="2" Grid.Column="0">
