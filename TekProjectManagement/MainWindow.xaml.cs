@@ -23,6 +23,7 @@ namespace TekProjectManagement
         public MainWindow()
         {
             InitializeComponent();
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
@@ -41,5 +42,35 @@ namespace TekProjectManagement
             ButtonOpenMenu.Visibility = Visibility.Collapsed;
             ButtonCloseMenu.Visibility = Visibility.Visible;
         }
+
+        private void ButtonMaximizeWindow_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Maximized;
+            }
+            else if(this.WindowState==WindowState.Maximized)
+                {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void ButtonMinimizeWindow_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Minimized;
+            }
+            else if (this.WindowState == WindowState.Minimized)
+            {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void ButtonAddProject_Click(object sender, RoutedEventArgs e)
+        {
+            //Função para adicionar projecto
+        }
     }
+       
 }

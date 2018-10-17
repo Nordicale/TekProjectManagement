@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TekProjectManagement"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Project Management" Height="600" Width="1024" WindowStyle="None" 
+        Title="Project Management" Height="800" Width="1024" WindowStyle="None"
         WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="White">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
@@ -89,7 +89,19 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="#FF252525">
-        <StackPanel x:Name="StackPanelMenu" Width="250" HorizontalAlignment="Left" Margin="-250,0,0,0" RenderTransformOrigin="0.5,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="647*"/>
+            <RowDefinition Height="154*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel x:Name="StackPanelMenu" Width="250" HorizontalAlignment="Left" Margin="-250,0,0,0" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                    <GradientStop Color="DarkRed" Offset="0"/>
+ 
+                    <GradientStop Color="#FF252525" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -99,14 +111,15 @@
                 </TransformGroup>
             </StackPanel.RenderTransform>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="100" HorizontalAlignment="Center">
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="50" Height="50" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Margin="10">
-                    <materialDesign:PackIcon Kind="Settings" Width="40" Height="40"/>
-                </Button>
                 <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="80" Height="80" Padding="0" BorderBrush="{x:Null}" Margin="10">
                     <Button.Background>
                         <ImageBrush ImageSource="Media/LogoNovo.png" Stretch="Uniform"/>
                     </Button.Background>
+                </Button>                
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="50" Height="50" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Margin="10">
+                    <materialDesign:PackIcon Kind="Settings" Width="40" Height="40"/>
                 </Button>
+
                 <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="50" Height="50" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Margin="10">
                     <materialDesign:PackIcon Kind="InformationOutline" Height="40" Width="40"/>
                 </Button>
@@ -122,7 +135,7 @@
                         </TransformGroup>
                     </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="Home" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <materialDesign:PackIcon Kind="Home" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Home" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
@@ -146,7 +159,7 @@
                                 <TranslateTransform/>
                             </TransformGroup>
                         </StackPanel.RenderTransform>
-                        <materialDesign:PackIcon Kind="Airplane" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <materialDesign:PackIcon Kind="Airplane" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Project" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
@@ -162,7 +175,7 @@
                         </TransformGroup>
                     </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="DeveloperBoard" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <materialDesign:PackIcon Kind="DeveloperBoard" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Production" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
@@ -178,7 +191,7 @@
                         </TransformGroup>
                     </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="Database" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <materialDesign:PackIcon Kind="Database" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Database" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
@@ -194,7 +207,7 @@
                         </TransformGroup>
                     </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="Store" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <materialDesign:PackIcon Kind="Store" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Stock" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
@@ -210,7 +223,7 @@
                         </TransformGroup>
                     </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="Calendar" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <materialDesign:PackIcon Kind="Calendar" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Calendar" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
@@ -226,7 +239,7 @@
                         </TransformGroup>
                     </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="Contacts" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <materialDesign:PackIcon Kind="Contacts" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="People" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
@@ -242,13 +255,30 @@
                         </TransformGroup>
                     </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="Run" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                        <materialDesign:PackIcon Kind="Run" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Logout" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
             </ListView>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="60" HorizontalAlignment="Center" Margin="0 100 0 0">
+                <TextBlock Text="Guilherme Tavares" Foreground="White" FontSize="24" VerticalAlignment="Center"
+                           
+                               FontFamily="Champagne &amp; Limousines" Margin="0"
+                               />
+            
+                <Ellipse Height="60" Width="60" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10 0 0 0"
+                             >
+                <!--Esta imagem vai ter que vir do Login após o usuário carregar uma-->
+                    <Ellipse.Fill>
+                    <ImageBrush ImageSource="Media/unnamed 3.jpg" Stretch="UniformToFill"/>
+
+                    </Ellipse.Fill>
+                </Ellipse>
+            </StackPanel>
+
+
         </StackPanel>
-        <Grid x:Name="GridMain" Background="#FF252525" Width="1024" Margin="-10,0,10,0" RenderTransformOrigin="0.5,0.5">
+        <Grid x:Name="GridMain" Background="#FF252525" Width="Auto" Margin="10,0,0,0" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -261,21 +291,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="250"/>
             </Grid.ColumnDefinitions>
+            <Image Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Media/unnamed.png" Stretch="Uniform" Margin="0 5"/>
             <Grid Grid.Column="1" Background="#FF383838">
 
-                <Image Height="150" VerticalAlignment="Top" Source="Media/unnamed.png" Stretch="Uniform" Margin="0 25"/>
-                <Ellipse Height="100" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right"
-                             Margin="20,100">
-                    <!--Esta imagem vai ter que vir do Login após o usuário carregar uma-->
-                    <Ellipse.Fill>
-                        <ImageBrush ImageSource="Media/home-logo-hi.png" Stretch="UniformToFill"/>
+                
 
-                    </Ellipse.Fill>
-                </Ellipse>
                 <!--Este bloco de texto tem que ser prenchido pelo Login/nome de usário-->
-                <TextBlock Text="Guilherme Tavares" Foreground="White" FontSize="20" 
-                               FontFamily="Nirmala UI Semilight" Margin="10 70"
-                               VerticalAlignment="Top"/>
 
                 <StackPanel Margin="0,150">
                     <Grid Height="60" Margin="20 50 20 0">
@@ -310,8 +331,12 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -323,9 +348,9 @@
                 <Button x:Name="ButtonCloseMenu" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Click="ButtonCloseMenu_Click" Visibility="Collapsed">
                     <materialDesign:PackIcon Kind="Menu" Foreground="White" Width="20" Height="20"/>
                 </Button>
-                <TextBlock Text="Project" Foreground="White" FontSize="30" FontWeight="Bold" Margin="5" Grid.Row="1"/>
+                <TextBlock Text="Project" Foreground="White" FontSize="30" FontWeight="Bold" Margin="15 0 0 0" Grid.Row="1"/>
 
-                <Grid Margin="5" Grid.Row="2" Grid.Column="0">
+                <Grid Margin="5" Grid.Row="2" Grid.Column="0" Background="#FFE01313">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="35"/>
@@ -333,57 +358,42 @@
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="#FFEEEEEE" ShadowDepth="1"/>
                     </Grid.Effect>
-                    <Image Source="Media/Logo.png" Stretch="Uniform" Grid.ColumnSpan="2"/>
-                    <StackPanel Orientation="Horizontal" Margin="0,0,5,5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1">
-                        <materialDesign:PackIcon Kind="Heart" Foreground="Black"/>
-                        <TextBlock Text="25" Foreground="Black"/>
-                    </StackPanel>
+                    <Image Source="Media/AR3Logo.png" Stretch="Uniform" Grid.ColumnSpan="2"/>
+
                 </Grid>
-                <Grid Margin="5" Grid.Row="2" Grid.Column="1">
+                <Grid Margin="5" Grid.Row="2" Grid.Column="1" Background="#FFE01313">
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="#FFEEEEEE" ShadowDepth="1"/>
                     </Grid.Effect>
-                    <Image Source="Media/Logo.png" Stretch="Uniform"/>
-                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                        <materialDesign:PackIcon Kind="Heart" Foreground="Black"/>
-                        <TextBlock Text="50" Foreground="Black"/>
-                    </StackPanel>
+                    <Image Source="Media/AR4Logo.png" Stretch="Uniform"/>
+
                 </Grid>
-                <Grid Margin="5" Grid.Row="2" Grid.Column="2">
+                <Grid Margin="5" Grid.Row="2" Grid.Column="2" Background="#FFE01313">
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="#FFEEEEEE" ShadowDepth="1"/>
                     </Grid.Effect>
-                    <Image Source="Media/Logo.png" Stretch="Uniform"/>
-                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                        <materialDesign:PackIcon Kind="Heart" Foreground="Black"/>
-                        <TextBlock Text="18" Foreground="Black"/>
-                    </StackPanel>
+                    <Image Source="Media/AR5Logo.png" Stretch="Uniform"/>
+
                 </Grid>
-                <Grid Margin="5" Grid.Row="3" Grid.Column="0">
+                <Grid Margin="5" Grid.Row="2" Grid.Column="3" Background="#FFE01313">
                     <Grid.Effect>
                         <DropShadowEffect BlurRadius="20" Color="#FFEEEEEE" ShadowDepth="1"/>
                     </Grid.Effect>
-                    <Image Source="Media/Logo.png" Stretch="Uniform"/>
-                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                        <materialDesign:PackIcon Kind="Heart" Foreground="Black"/>
-                        <TextBlock Text="10255" Foreground="Black"/>
-                    </StackPanel>
-                </Grid>
-                <Grid Margin="5" Grid.Row="2" Grid.Column="3">
-                    <Grid.Effect>
-                        <DropShadowEffect BlurRadius="20" Color="#FFEEEEEE" ShadowDepth="1"/>
-                    </Grid.Effect>
-                    <Image Source="Media/Logo.png" Stretch="Uniform"/>
-                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                        <materialDesign:PackIcon Kind="Heart" Foreground="Black"/>
-                        <TextBlock Text="10255" Foreground="Black"/>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="ButtonAddProject_Click">
+                        <materialDesign:PackIcon Kind="PlusBox" Width="40" Height="40" Foreground="White"/>
+                    </Button>
+                    <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                        <TextBlock Text="Add Project" Foreground="White" FontFamily="Champagne &amp; Limousines" FontSize="24" FontWeight="Bold"/>
                     </StackPanel>
                 </Grid>
             </Grid>
         </Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="40" HorizontalAlignment="Right" Margin="0">
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}">
-                <materialDesign:PackIcon Kind="Bell" Width="20" Height="20"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="40" HorizontalAlignment="Right" Margin="0 0 5 0">
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="ButtonMinimizeWindow_Click">
+                <materialDesign:PackIcon Kind="WindowMinimize" Width="20" Height="20"/>
+            </Button>
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="ButtonMaximizeWindow_Click">
+                <materialDesign:PackIcon Kind="WindowMaximize" Width="20" Height="20"/>
             </Button>
             <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="ButtonClose_Click">
                 <materialDesign:PackIcon Kind="Power" Width="20" Height="20"/>

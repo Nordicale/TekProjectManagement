@@ -23,5 +23,23 @@ namespace TekProjectManagement
         {
             InitializeComponent();
         }
+
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainwindownav = new MainWindow();
+            this.Visibility = Visibility.Hidden;
+            mainwindownav.ShowDialog();
+        }
+
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void ButtonInfo_Click(object sender, RoutedEventArgs e)
+        {
+            //Mostra informação da versão ou qq coisa ainda em estudo;
+        }
+
     }
 }
